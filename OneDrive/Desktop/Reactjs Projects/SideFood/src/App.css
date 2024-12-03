@@ -1,0 +1,258 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+* {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: 0.2s linear;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-padding-top: 9rem;
+  scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+  width: 0.8rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: #fff;
+  border-radius: 5rem;
+}
+
+body {
+  background: #010103;
+  overflow-x: hidden;
+}
+
+section {
+  padding: 2rem 7%;
+}
+
+.heading {
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  padding-bottom: 3.5rem;
+}
+
+.header {
+  background: #010103;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 7%;
+  border-bottom: 0.2rem solid #ffc107;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.logo img {
+  max-width: 75px;
+  height: auto;
+  transition: 0.3s all ease-in-out;
+}
+
+.logo img:hover {
+  transform: scale(1.1);
+}
+
+.navbar {
+  display: flex;
+}
+
+.navbar .Nav-item {
+  text-decoration: none;
+  color: #019ed6;
+  font-weight: 500;
+  font-size: 18px;
+  margin-left: 20px;
+}
+.navbar {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .navbar.active {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #010103;
+    padding: 1rem 0;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  #menu-btn {
+    display: none;
+  }
+    .navbar.active {
+      display: flex;
+    }
+  
+    .Nav-item {
+      margin: 1rem 0;
+    }
+.header .Nav-item:hover {
+  color: green;
+  border-bottom: 0.2rem solid #ffc107;
+  padding-bottom: 0.5rem;
+}
+
+.icons div {
+  margin-left: 15px;
+  color: white;
+  cursor: pointer;
+  margin-left: 2rem;
+}
+
+#menu-btn {
+  display: none;
+}
+
+.icons div:hover {
+  color: green;
+}
+
+.header .search-form {
+  position: absolute;
+  top: 115%;
+  right: 7%;
+  background: #fff;
+  width: 50rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  transform: scaleY(0);
+  transform-origin: top;
+}
+
+.header .search-form.active {
+  transform: scaleY(1);
+}
+
+.header .search-form input {
+  height: 100%;
+  width: 100%;
+  font-size: 1.6rem;
+  color: #13131a;
+  padding: 1rem;
+  text-transform: none;
+}
+
+.header .search-form label {
+  cursor: pointer;
+  font-size: 2.2rem;
+  margin-right: 1.5rem;
+  color: #13131a;
+}
+
+.header .search-form label:hover {
+  color: #ffc107;
+}
+
+.header .cart-items-container {
+  position: absolute;
+  top: 100%;
+  right: -100%;
+  height: calc(100vh - 9.5rem);
+  width: 35rem;
+  background: #fff;
+  padding: 0 1.5rem;
+  transition: right 0.3s ease-in-out;
+}
+
+.header .cart-items-container.active {
+  right: 0;
+}
+
+.header .cart-items-container .cart-item {
+  position: relative;
+  margin: 2rem 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.header .cart-items-container .cart-item .fa-x {
+  position: relative;
+  font-size: 2rem;
+  bottom: 0.5rem;
+  cursor: pointer;
+}
+
+.header .cart-items-container .cart-item .fa-x:hover {
+  color: #ffc107;
+}
+
+.header .cart-items-container .cart-item img {
+  height: 7rem;
+}
+
+.header .cart-items-container .cart-item .content h3 {
+  font-size: 2rem;
+  color: #13131a;
+  padding-bottom: 0.5rem;
+}
+
+.header .cart-items-container .cart-item .content .price {
+  font-size: 1.5rem;
+  color: #ffc107;
+}
+
+.header .cart-items-container .btn {
+  width: 100%;
+  font-size: 18px;
+  padding: 8px 10px;
+  text-align: center;
+  background: #ffc107;
+  color: #010103;
+  font-weight: bold;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.header .cart-items-container .btn a {
+  color: #010103;
+  text-decoration: none;
+}
+
+.header .cart-items-container .btn:hover {
+  background: #019ed6;
+  color: #fff;
+}
+
+/* Responsive Codes for Navbar */
+@media (max-width:768px) {
+    #menu-btn{
+       display: inline-block;        
+    }
+    .navbar{
+        display: none;
+    }
+}
